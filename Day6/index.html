@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class course {
+            constructor(name, year, mode) {
+                console.log('class contructor', name, year)
+                this.name = name
+                this.year = year
+                this.mode = mode
+            }
+
+            getMode() {
+                console.log('Course Mode', this.mode)
+            }
+
+
+        }
+
+        const s1 = new course('guvi', 2023, 'online')
+        const s2 = new course('zen', 2023, 'online')
+        console.log(s1)
+        console.log(s2)
+        s1.getMode()
+        s2.getMode()
+
+        class myDetails {
+            constructor(name, place, professional) {
+                console.log(name, place, professional)
+                this.name = name
+                this.place = place
+                this.professional = professional
+            }
+            getPlace() {
+                console.log('myDetails', this.place)
+            }
+
+            getProfessional() {
+                console.log('myDetails', this.professional)
+            }
+
+        }
+
+        const s3 = new myDetails('shubham', 'kalaburagi KA', 'Mern Stack')
+        const s4 = new myDetails('Peddarrpeth', 'KALABURAGI KA', 'MERN STACK')
+
+        s3.getPlace()
+        s4.getProfessional()
+
+        console.log('myDetails s3', s3)
+        console.log('myDetals s4', s4)
+
+        class movie {
+            constructor(title, studio, rating = 'PG') {
+                this.title = title
+                this.studio = studio
+                this.rating = rating
+            }
+            getPg(arr) {
+                console.log('getpg is called', arr)
+                let pgAraay = []
+                for (var index = 0; index < arr.length; index++) {
+                    if (arr[index].rating == 'PG') {
+                       
+                        pgAraay.push(arr[index])
+                    }
+
+
+                }
+                console.log(pgAraay)
+
+            }
+
+        }
+
+        let movieArray = []
+        let movie1 = new movie('abc', 'abc production', 'pg5')
+        let movie2 = new movie('pqr', 'pqr production')
+        let movie3 = new movie('rcb', 'rcb production', 'pg5')
+        let movie4 = new movie('csk', 'csk production')
+
+        movieArray.push(movie1, movie2, movie3, movie4)
+
+        console.log(movieArray)
+
+        movie3.getPg(movieArray)
+
+    </script>
+
+
+</body>
+
+</html>
